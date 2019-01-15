@@ -3,6 +3,7 @@
   var nx = global.nx || require('next-js-core2');
 
   nx.isWindow = function(inObj) {
+    // In IE8 window.window !== window.window, so we allow == here.
     return inObj != null && inObj == inObj.global;
   };
 
